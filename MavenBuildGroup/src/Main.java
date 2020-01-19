@@ -110,17 +110,18 @@ public class Main {
                 jsonTest.put("destination", destination);
                 jsonTest.put("object_type", "response");
                 jsonTest.put("origin", "1");
-    			jsonTest.put("operation", "1");
-    			jsonTest.put("status", signal.toString());
-    			jsonTest.put("description", report);
-    			jsonTest.put("commit_ID", commit);
-    			jsonTest.put("github_login", login.toString());
-    			jsonTest.put("github_password", password.toString());
-    			jsonTest.put("repository_url", url.toString());
-    			jsonTest.put("project_name", projectName.toString());
-    			jsonTest.put("method", "check-build-status");
+    		jsonTest.put("operation", "1");
+    		jsonTest.put("status", signal.toString());
+    		jsonTest.put("description", report);
+    		jsonTest.put("commit_ID", commit);
+    		jsonTest.put("github_login", login.toString());
+    		jsonTest.put("github_password", password.toString());
+    		jsonTest.put("repository_url", url.toString());
+    		jsonTest.put("project_name", projectName.toString());
+    		jsonTest.put("method", "check-build-status");
+		jsonTest.put("targetPswd", "gtu2017A");
     			
-    			String postUrl = "http://localhost:8081";
+    		String postUrl = "http://localhost:8081";
     			
     			System.err.print("Test response " + HttpRequest.PostJson(postUrl, jsonTest.toString()));
     			
@@ -139,9 +140,10 @@ public class Main {
                 jsonPLan.put("repository_url", url.toString());
                 jsonPLan.put("project_name", projectName.toString());
                 jsonPLan.put("method", "check-build-status");
+		jsonTest.put("targetPswd", "gtu2017A");
     			
     			
-    			System.err.print("PLan response " + HttpRequest.PostJson(postUrl, jsonPLan.toString()));
+    		System.err.print("PLan response " + HttpRequest.PostJson(postUrl, jsonPLan.toString()));
             }
             else {
             	destination = "2";
@@ -160,6 +162,7 @@ public class Main {
     			json.put("repository_url", url.toString());
     			json.put("project_name", projectName.toString());
     			json.put("method", "check-build-status");
+		    	jsonTest.put("targetPswd", "gtu2017A");
     			
     			String postUrl = "http://localhost:8081";
     			
