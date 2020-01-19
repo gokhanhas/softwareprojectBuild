@@ -110,22 +110,22 @@ public class Main {
                 jsonTest.put("destination", destination);
                 jsonTest.put("object_type", "response");
                 jsonTest.put("origin", "1");
-    			jsonTest.put("operation", "1");
-    			jsonTest.put("status", signal.toString());
-    			jsonTest.put("description", report);
-    			jsonTest.put("commit_ID", commit);
-    			jsonTest.put("github_login", login.toString());
-    			jsonTest.put("github_password", password.toString());
-    			jsonTest.put("repository_url", url.toString());
-    			jsonTest.put("project_name", projectName.toString());
-    			jsonTest.put("method", "check-build-status");
+    		jsonTest.put("operation", "1");
+    		jsonTest.put("status", signal.toString());
+    		jsonTest.put("description", report);
+    		jsonTest.put("commit_ID", commit);
+    		jsonTest.put("github_login", login.toString());
+    		jsonTest.put("github_password", password.toString());
+    		jsonTest.put("repository_url", url.toString());
+    		jsonTest.put("project_name", projectName.toString());
+    		jsonTest.put("method", "check-build-status");
     			
-    			String postUrl = "http://localhost:8081";
+    		String postUrl = "http://localhost:8081";
     			
-    			System.err.print("Test response " + HttpRequest.PostJson(postUrl, jsonTest.toString()));
+    		System.err.print("Test response " + HttpRequest.PostJson(postUrl, jsonTest.toString()));
     			
-    			destination = "2";
-    			// JSon objesi hazirlama ...
+    		destination = "2";
+    		// JSon objesi hazirlama ...
                 JSONObject jsonPLan = new JSONObject();
                 jsonPLan.put("destination", destination);
                 jsonPLan.put("object_type", "response");
@@ -141,29 +141,29 @@ public class Main {
                 jsonPLan.put("method", "check-build-status");
     			
     			
-    			System.err.print("PLan response " + HttpRequest.PostJson(postUrl, jsonPLan.toString()));
+    		System.err.print("PLan response " + HttpRequest.PostJson(postUrl, jsonPLan.toString()));
             }
             else {
             	destination = "2";
                 commit = "0";
     			// JSon objesi hazirlama ...
                 JSONObject json = new JSONObject();
-    			json.put("destination", destination);
-    			json.put("object_type", "response");
-    			json.put("origin", "1");
-    			json.put("operation", "1");
-    			json.put("status", signal.toString());
-    			json.put("description", report);
-    			json.put("commit_ID", commit);
-    			json.put("github_login", login.toString());
-    			json.put("github_password", password.toString());
-    			json.put("repository_url", url.toString());
-    			json.put("project_name", projectName.toString());
-    			json.put("method", "check-build-status");
+    		json.put("destination", destination);
+    		json.put("object_type", "response");
+    		json.put("origin", "1");
+    		json.put("operation", "1");
+    		json.put("status", signal.toString());
+    		json.put("description", report);
+    		json.put("commit_ID", commit);
+    		json.put("github_login", login.toString());
+    		json.put("github_password", password.toString());
+    		json.put("repository_url", url.toString());
+    		json.put("project_name", projectName.toString());
+    		json.put("method", "check-build-status");
     			
-    			String postUrl = "http://localhost:8081";
+    		String postUrl = "http://localhost:8081";
     			
-    			System.err.print("response Fail" + HttpRequest.PostJson(postUrl, json.toString()));
+    		System.err.print("response Fail" + HttpRequest.PostJson(postUrl, json.toString()));
             }
 
             
